@@ -1,5 +1,5 @@
-
 import React, {useState, useEffect} from 'react'
+import BooksContainer from './components/Books'
 
 const App = () => {
 
@@ -23,6 +23,12 @@ const App = () => {
   }, [])
   
   console.log(`the books array in our state: `, books)
+
+  return (
+	  <>
+		  <BooksContainer books={books}/>
+		</>
+	)
 
 }
 
