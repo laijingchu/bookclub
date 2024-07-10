@@ -29,6 +29,10 @@ const App = () => {
     setSelectedBook(book)
   }
 
+  const closePanel = (closePanel) => {
+    setSelectedBook(null)
+  }
+
   console.log(selectedBook)
 
   return (
@@ -36,7 +40,7 @@ const App = () => {
     <GlobalStyle />
       <Header />
 		  <BooksContainer books={books} pickBook={pickBook} />
-      {selectedBook && <DetailPanel book={selectedBook} />}
+      {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel}/>}
 		</>
 	)
 
